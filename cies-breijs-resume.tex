@@ -1,0 +1,162 @@
+%
+% LaTeX source of my resume
+% =========================
+%
+% Heavily commented to to fit even LaTeX beginners (hopefully).
+%
+% See the `README.md` file for more info.
+%
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+
+
+
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+
+% title on top of the document
+\maintitle{Andrew Blinn}{}{\today}
+
+\nobreakvspace{0.3em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent\href{mailto:me@andrewblinn.com}{me\mbox{}@\mbox{}andrewblinn.com}\sbull
+\textsmaller+1 (647) 909-6867\sbull
+\href{http://github.com/disconcision}{github.com/disconcision}
+\\
+Toronto\sbull
+Canada\sbull Spoken Languages : English + French (basic)
+
+\spacedhrule{0.8em}{0em}  % a horizontal line with some vertical spacing before and after
+
+% \roottitle{Summary}  % a root section title
+
+\vspace{0.8em}  % some vertical spacing
+
+ \emph{Passionate about programming languages as user interfaces. Seeking practical experiencing developing robust and lasting software. Keeps current with PL research, particularly at the intersection of PL and UX.  }
+
+\spacedhrule{0.8em}{-0.4em}
+
+\roottitle{Work Experience @ \href{http://www.utoronto.ca}{University of Toronto, Canada}}
+
+  \headedsubsection
+    {Course materials development}
+    {Summer 2018}
+    {\bodytext{Developed code \& documentation for professor David Liu's programming language theory course. Designed \& implemented an educational language featuring pattern matching and algebraic data types}}
+  \headedsubsection
+    {DSL development}
+    {Fall 2017}
+    {\bodytext{Supported professor Gary Baumgartner in developing the CSC104 language, used for a $1^{st}$-year course in computational thinking. Focused on syntax rewriting and beginner-focused error reporting}}
+  \headedsubsection
+    {Teaching assistant}
+    {Sep 2017 -- Current}
+    {\bodytext{Principles of Programming Languages (5 semesters); Introduction to Computational Thinking (1 semester). Responsibilities include lecturing, individual tutoring with a focus on TDD, code reviews, \& semi-automated testing. Responded to student needs by initiating and building an algebraic code stepper to demonstrate continuations in Scheme}}
+
+
+\spacedhrule{0.6em}{-0.4em}
+
+
+\roottitle{Education @ \href{http://www.utoronto.ca}{University of Toronto, Canada}}
+
+  \headedsubsection
+    {H.BSc in Mathematics \& Computer Science}
+    {Graduating Spring 2019}
+    {\bodytext{
+    4.0 CS Program GPA. Led a student reading group on Category Theory. Compilers coursework: Developed a $\lambda$-calculus-based language with a macro system which both compiles to x86 and transpiles to C. Coursework in abstract algebra including Galois Theory, differential geometry, topology, \& logic}}
+  \headedsubsection
+    {Research: Variational Data Structures with Marsha Chechik}
+    {Sep 2018 - Current}
+    {\bodytext {Developing \& profiling higher-order data structures in Haskell to underpin
+    static analysis of software product lines. Developed a Graphviz-based tool to visually introspect data  sharing}}
+  \headedsubsection
+    {Research: Structured Editing in Racket with Gary Baumgartner}
+    {Summer 2017}
+    {\bodytext{Self-initiated study of extant refactoring, live programming, and direct manipulation tooling, culminating in the design and implementation of a Racket-based polyglot structure editor; development ongoing}}
+
+
+\spacedhrule{0.5em}{-0.4em}
+
+\roottitle{Skills}
+
+    \inlineheadsection
+    {Functional Programming: }
+    { Type- and Test-Driven-Development in Racket, Scheme, \& Haskell. \\ Property-based testing with QuickCheck. DSL development in Racket/Redex}
+
+    \inlineheadsection
+    {UI Design \& Graphics : }
+    {CSS/HTML, mockups in Adobe CS incl. Photoshop, Illustrator, After Effects}
+    
+    \inlineheadsection 
+    {Performance Profiling \& Parallelism/Concurrency : }
+    {C, C++, CUDA, OpenMP, \& MPI}
+    
+    \inlineheadsection 
+    {Other languages \& tech : } 
+    {\LaTeX,  GNU/Linux, Bash,  Git, Java, Python}
+  
+
+
+\spacedhrule{1.4em}{-0.4em}
+
+
+\roottitle{Conferences \& Workshop Attendance}
+
+  \headedsubsection
+    {ICFP 2018 (International Conference on Functional Programming)}
+    {2018, St.Louis}
+    {\bodytext{
+    Attended fully-funded on PLMW Scholarship}}
+    
+  \headedsubsection
+    {Strange Loop 2018 \& RacketCon 2018}
+    {2018, St.Louis}
+
+  \headedsubsection
+    {OPLSS 2018 (Oregon Programming Languages Summer School)}
+    {2018, Eugene}
+    {\bodytext{
+    An intensive three-week program of lectures and workshops with leading PL researchers}}
+
+
+\spacedhrule{0.6em}{-0.4em}
+
+\roottitle{Personal Projects (see Github)}
+
+\inlineheadsection
+  {Projects include:}
+  {Fructure, a Racket-based structured editor focusing on composable refactoring. Fructerm: a term-rewriting library for Racket with run-time specifiable rewrite-rules. Containment Patterns: A collection of custom pattern combinators enabling concise updates of deeply-nested data structures.}
+
+
+\vspace{0.8em}
+
+\spacedhrule{0.6em}{-0.4em}
+
+\roottitle{Outside Interests}
+
+\inlineheadsection
+  {}{Year-round bike commuter. Running, bouldering, camping, photography.}
+
+
+\end{document}
+
+＀
