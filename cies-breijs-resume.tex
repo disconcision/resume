@@ -24,8 +24,6 @@
 \usepackage{resume}
 
 
-
-
 \begin{document}  % begin the content of the document
 \sloppy  % this to relax whitespacing in favour of straight margins
 
@@ -40,126 +38,90 @@
 % \sbull is a spaced bullet
 % \href well..
 % \\ breaks the line into a new paragraph
-\noindent\href{mailto:me@andrewblinn.com}{me\mbox{}@\mbox{}andrewblinn.com}\sbull
-\textsmaller+1 (647) 909-6867\sbull
-\href{http://github.com/disconcision}{github.com/disconcision}
+\noindent
+%   \textsmaller+1 (647) 909-6867\sbull
+    \href{mailto:me@andrewblinn.com}{me\mbox{}@\mbox{}andrewblinn.com}\sbull
+    \href{http://github.com/disconcision}{github.com/disconcision}
 \\
-Toronto\sbull
-Canada\sbull Spoken Languages : English + French (basic)
+Toronto / Canada\sbull
+English + French (basic)
 
-\spacedhrule{0.8em}{0em}  % a horizontal line with some vertical spacing before and after
-
-% \roottitle{Summary}  % a root section title
-
-\vspace{0.8em}  % some vertical spacing
-
- \emph{Passionate about programming languages as user interfaces; keeps current with PL/FP/UI research \& development }
-
-\spacedhrule{0.8em}{-0.4em}
+\textcolor{spacergray}{\spacedhrule{0em}{1.0em}}% a horizontal line with some vertical spacing before and after
+\emph{Passionate about programming languages as user interfaces \& keeps current with PL/FP/UI research \& development}
+\textcolor{spacergray}{\spacedhrule{0.8em}{-0.4em}}
 
 \roottitle{Work @ \href{http://todaqfinance.net/}{TodaQ, Toronto}}
-
-  \headedsubsection
-        {Software Engineer; Clojure}
+  \headedsubsection {Software Development in Clojure}
     {May 2019 - Current}
-    {\bodytext{Implementing a novel protocol for distributed digital asset management and its ancillary web services}}
-    
+    {\bodytext{Implementing a novel distributed digital asset management protocol \& ancillary web services}}
+\vspace{-0.9em} % hack
 \roottitle{Work @ \href{http://www.utoronto.ca}{University of Toronto}}
-
-  \headedsubsection
-    {Course materials development}
+  \headedsubsection {Software \& Documentation Development}
     {Summer 2018}
-    {\bodytext{Developed code \& documentation for professor David Liu's programming language theory course. Designed \& implemented an educational language featuring pattern matching and algebraic data types}}
-  \headedsubsection
-    {Teaching assistant}
-    {Sep 2017 -- May 2019}
-    {\bodytext{Principles of Programming Languages (5 semesters); Introduction to Computational Thinking (1 semester). Responsibilities include lecturing, individual tutoring with a focus on TDD, code reviews, \& semi-automated testing. Built an algebraic code stepper to demonstrate continuations in Scheme}}
+    {\bodytext{Wrote code \& exegesis for professor David Liu's programming language theory course \\ Designed \& built an \href{https://github.com/disconcision/ductile}{educational language} with pattern matching \& algebraic data types}}
+  \headedsubsection {Teaching assistance for Principles of Programming Languages (5 semesters)}
+    {2017 -- 2019}
+    {\bodytext{Led tutorials, managed fora \& coached with a focus on testing/TDD \& code review \\ Built an \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic code stepper} to illustrate continuations in Scheme}}
 
+\textcolor{spacergray}{\spacedhrule{0em}{-0.4em}}
 
-\spacedhrule{0.6em}{-0.4em}
-
-
-\roottitle{Education @ \href{http://www.utoronto.ca}{University of Toronto}}
-
-  \headedsubsection
-    {H.BSc in Mathematics \& Computer Science}
-    {2014 - 2019}
-    {\bodytext{
-    Led a student reading group on Category theory. Compilers coursework: Developed a $\lambda$-calculus-based language with a macro system compiling to x86 and transpiling to C. Coursework in abstract algebra including Galois Theory, differential geometry, topology, \& logic}}
-  \headedsubsection
-    {Research: Variational Data Structures with Marsha Chechik}
-    {Sep 2018 - Current}
-    {\bodytext {Developing \& profiling higher-order data structures in Haskell to underpin
-    static analysis of software product lines. Developed \href{https://github.com/disconcision/spyshare}{SpyShare}, a Graphviz-based tool to visually introspect data  sharing}}
-  \headedsubsection
-    {Research: Structured Editing in Racket with Gary Baumgartner}
+\roottitle{School @ \href{http://www.utoronto.ca}{University of Toronto}}
+  \headedsubsection {H.B.Sc in Mathematics \& Computer Science}
+  {2014 - 2019}
+  {\bodytext{
+    Graduate-level coursework in abstract algebra, compilers, graphics \& languages \\
+    Built a Racket-based x86/C com/transpiler for a $\lambda$-calculus-based language with macro system \\ Coursework in abstract algebra, algorithms, concurrency, differential geometry \& topology}}
+  \headedsubsection {Research in Variational Data Structures with Marsha Chechik}
+  {2018 - Current}
+  {\bodytext {
+    Built \& profiled Haskell data structures supporting variational analysis of large software product lines \\ Designed \& built \href{https://github.com/disconcision/spyshare}{SpyShare}, a Graphviz-based tool to visually inspect data sharing}}
+  \headedsubsection {Research in Structured Editing in Racket with Gary Baumgartner}
     {Summer 2017}
-    {\bodytext{Self-initiated study of extant refactoring, live programming, and direct manipulation tooling, culminating in the design and implementation of a Racket-based polyglot structure editor; development ongoing}}
+    {\bodytext{Self-initiated study of extant refactoring, live programming, and direct manipulation tooling\\ Designed \& began implementation of \href{https://github.com/disconcision/fructure}{Fructure}, a Racket-based polyglot structure editor}}
 
+\textcolor{spacergray}{\spacedhrule{0em}{-0.4em}}
 
-\spacedhrule{0.5em}{-0.4em}
+\roottitle{Personal Projects}
+\bodytext{
+  \href{https://github.com/disconcision/fructure}{Fructure} is a prototype editor focused on composable refactoring, to be featured at \href{https://con.racket-lang.org/#speakers}{RacketCon 2019} \\  \href{https://github.com/disconcision/containment-patterns}{Containment Patterns} extend Racket pattern matching to capture contexts within deeply-nested data structures \\ \href{https://github.com/disconcision/depthmarch}{Depthmarch} is an OpenMP-parallelized C++ raymarcher for constructive solid geometry}
 
-\roottitle{Skills}
+\textcolor{spacergray}{\spacedhrule{0em}{-0.4em}}
 
-    \inlineheadsection
-    {Functional Programming: }
-    { Type- and Test-Driven-Development in Racket/Scheme, Clojure \& Haskell. \\ Property-based testing with QuickCheck. DSL development in Racket/Redex}
+\roottitle{Technical Skills}
+    \inlineheadsection {Functional Programming -}
+    {Type/Test-Driven-Development in Racket, Scheme, Clojure \& Haskell \\
+    Property-based testing with QuickCheck. DSL development with Racket/Redex}
+    \inlineheadsection {UI \& Graphics -}
+    {CSS/HTML. Design mock-up in Adobe Photoshop/Illustrator/After-Effects \\
+    Raytracing, rasterization, kinematics \& geometry processing in C++ \& GLSL}
+    \inlineheadsection {Profiling \& Parallelism/Concurrency -}
+    {C, C++ with OpenMP \& MPI. CUDA. core.async}
+    \inlineheadsection {Etc -} 
+    {\LaTeX, Python, Java, Git, Bash, GNU/Emacs/Linux/Windows/MacOS}
 
-    \inlineheadsection
-    {UI Design \& Graphics : }
-    {CSS/HTML, mockups in Adobe CS incl. Photoshop, Illustrator, After Effects. \\
-    Raytracing, raymarching, rasterization, \& kinematics in C++ \& GLSL}
-    
-    \inlineheadsection 
-    {Performance Profiling \& Parallelism/Concurrency : }
-    {C, C++: OpenMP, MPI; CUDA; core.async }
-    
-    \inlineheadsection 
-    {Other languages \& tech : } 
-    {\LaTeX, Emacs, Bash, Git, Java, Python, GNU/Linux/Windows/MacOS}
-  
-
-
-\spacedhrule{1.4em}{-0.4em}
-
+\textcolor{spacergray}{\spacedhrule{0.8em}{-0.4em}}
 
 \roottitle{Conferences \& Workshop Attendance}
 
-  \headedsubsection
-    {Clojure North 2019, Strange Loop 2018 , RacketCon 2018}
-    {Various}
-    
-  \headedsubsection
-    {ICFP 2018 (International Conference on Functional Programming)}
-    {2018, St.Louis}
+  \headedsubsection {ICFP - International Conference on Functional Programming}
+    {St.Louis, 2018}
     {\bodytext{
     Attended fully-funded on PLMW Scholarship}}
     
-  \headedsubsection
-    {OPLSS 2018 (Oregon Programming Languages Summer School)}
-    {2018, Eugene}
+  \headedsubsection {OPLSS - Oregon Programming Languages Summer School}
+    {Eugene, 2018}
     {\bodytext{
-    An intensive three-week program of lectures and workshops with leading PL researchers}}
+    A three-week program of lectures, workshops \& rock-climbing with leading PL researchers}}
+
+  \headedsubsection {Etc - Clojure North 2019, Strange Loop 2018 , RacketCon 2018}
+    {2018 - 2019}
+    
 
 
-\spacedhrule{0.6em}{-0.4em}
 
-\roottitle{Personal Projects (see Github)}
-
-\inlineheadsection
-  {Projects:}
-  {\href{https://github.com/disconcision/fructure}{Fructure}, a Racket-based structured editor focusing on composable refactoring, to be featured at \href{https://con.racket-lang.org/#speakers}{RacketCon 2019}. \href{https://github.com/disconcision/depthmarch}{Depthmarch}, A C++ raymarcher for constructive solid geometry, parallelized in OpenMP. \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}, custom pattern matchers enabling concise updates of deeply-nested data structures}
-
-
-\vspace{0.8em}
-
-\spacedhrule{0.6em}{-0.4em}
-
-\roottitle{Outside Interests}
-
-\inlineheadsection
-  {}{Year-round bike commuter. Running, bouldering, camping, photography}
-
+\textcolor{spacergray}{\spacedhrule{0em}{1.0em}}% a horizontal line with some vertical spacing before and after
+\emph{Outside interests - Bouldering, running, camping, taking pictures, \& bike-commuting year-round}
+\textcolor{spacergray}{\spacedhrule{0.8em}{-0.4em}}
 
 \end{document}
 

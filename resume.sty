@@ -51,7 +51,9 @@
 % Setup the hyperrefs witht he right color.
 \usepackage{hyperref}  
 \usepackage{xcolor}
-\definecolor{dark-blue}{rgb}{0.15,0.15,0.4}
+\definecolor{dark-blue}{rgb}{0.1, 0.65, 0.8}
+\definecolor{mygray}{gray}{0.6}
+\definecolor{spacergray}{gray}{0.6}
 \hypersetup{colorlinks,linkcolor={dark-blue},citecolor={dark-blue},urlcolor={dark-blue}}
 
 % XeTeX specific stuff with fall-back.
@@ -114,7 +116,7 @@
 %%% CUSTOM COMMANDS
 
 % main title (name) with subtitle (date)
-\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\color{gray} #3}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
+\newcommand\maintitle[3]{\vbox to 0pt{\hfill\scriptsize\emph{\textcolor{mygray}{#3}}}\vspace{-0.4em}\noindent{\LARGE \textbf{#1}}\ \ \ \emph{#2}}
 
 % title for the root sections (experience, education, etc) of the resume
 \newcommand*\roottitle[1]{\subsection*{#1}\vspace{-0.3em}\nopagebreak[4]}
@@ -147,7 +149,10 @@
 \newcommand{\headedsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textscale{1.1}{#1}\hfill#2#3\end{indentsection}\nopagebreak[4]}
 
 % subheaderrow command, used for a new position
-\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{#2}#3\end{indentsection}\nopagebreak[4]}
+% previous version with right-justification (hfill)
+%\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\hfill\emph{\textcolor{mygray}{#2}}#3\end{indentsection}\nopagebreak[4]}
+
+\newcommand{\headedsubsection}[3]{\nopagebreak[4]\begin{indentsection}\item[]\textbf{#1}\emph{\textcolor{mygray}{\sbull #2}}#3\end{indentsection}\nopagebreak[4]}
 
 % body text (indented)
 \newcommand{\bodytext}[1]{\nopagebreak[4]\begin{indentsection}\item[]#1\end{indentsection}\pagebreak[2]}
@@ -160,7 +165,19 @@
 \newcommand{\spacedhrule}[2]{\breakvspace{#1}\hrule\nobreakvspace{#2}}
 
 % \inlineheadsection command, used for a new employer
-\newcommand{\inlineheadsection}[2]{\begin{basedescript}{\setlength{\leftmargin}{\doubleparindent}}\item[\hspace{\newparindent}\textbf{#1}]#2\end{basedescript}\vspace{-1.7em}}
+\newcommand{\inlineheadsection}[2]{
+    \begin{basedescript}{
+        \setlength{\leftmargin}
+                  {\doubleparindent}}
+        \item[\hspace{\newparindent}
+              \textbf{#1}]
+        #2
+    \end{basedescript}
+    \vspace{-1.7em}}
+
+% \inlineheadsection except no indent
+\newcommand{\inlineheadsectionnoindent}[1]{
+    \hspace{\newparindent} #1 }
 
 % apo command, for an apostrophe that looks good on old style nums
 \newcommand{\apo}{\raisebox{-.18ex}{'}{\hspace{-.1em}}}
