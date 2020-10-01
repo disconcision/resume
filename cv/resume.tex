@@ -1,0 +1,129 @@
+%
+% Adapted by me from a template by Cies Breijs
+% See the `README.md` file for more info.
+% This file is licensed under the CC-NC-ND Creative Commons license.
+%
+
+
+% Start a document with the here given default font size and paper size.
+\documentclass[10pt,a4paper]{article}
+
+% Set the page margins.
+\usepackage[a4paper,margin=0.75in]{geometry}
+
+% Setup the language.
+\usepackage[english]{babel}
+\hyphenation{Some-long-word}
+
+% Makes resume-specific commands available.
+\usepackage{resume}
+
+%\usepackage{fontspec}
+%\setmainfont{Georgia} 
+\begin{document}  % begin the content of the document
+\sloppy  % this to relax whitespacing in favour of straight margins
+
+% title on top of the document
+\maintitle{Andrew Blinn}{}{\today}
+
+\nobreakvspace{0.5em}  % add some page break averse vertical spacing
+
+% \noindent prevents paragraph's first lines from indenting
+% \mbox is used to obfuscate the email address
+% \sbull is a spaced bullet
+% \href well..
+% \\ breaks the line into a new paragraph
+\noindent
+%   \textsmaller+1 (647) 909-6867\sbull
+    \href{http://andrewblinn.com}{andrewblinn.com}\sbull
+    \href{mailto:me@andrewblinn.com}{me\mbox{}@\mbox{}andrewblinn.com}\sbull
+    \href{http://github.com/disconcision}{github.com/disconcision}
+    
+
+\textcolor{spacergray}{\spacedhrule{-0.27em}{0em}}
+
+
+\roottitle{Research Interests}
+\bodytext{
+  Programming Languages \sbull
+  Human-Computer Interaction
+  }
+  
+\roottitle{Education}
+  \headedsubsection  {\href{http://www.utoronto.ca}{University of Toronto} \sbull H.B.Sc in Mathematics \& Computer Science}
+  {May 2019}
+  {\bodytext{
+    Graduate-level coursework in abstract algebra, compilers, graphics \& languages.
+    \\
+    Coursework in algorithms, concurrency, differential geometry, operating systems \& topology.
+    \\
+    Built a Racket-based x86/C compiler for a $\lambda$-calculus-based language with macro system.
+    }}
+    
+\roottitle{Research Experience}    
+  \headedsubsection {Techniques in Variability-aware Data Structures with Marsha Chechik}
+  {2018 - 2019}
+  {\bodytext{
+    Built \& profiled Haskell data structures supporting variational analysis of software product lines.
+    \\
+    Designed \& built \href{https://github.com/disconcision/spyshare}{SpyShare}, a Graphviz-based tool to visually inspect data sharing.
+    \\
+    Created and modelled a system of GHC rewrite-rules using PLT Redex.
+    \\
+    \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_TECHNIQUES_IN_VARIABILITY_AWARE_DATA_STRUCTURES.pdf}{Project Report} \sbull \href{https://github.com/disconcision/vardatalab/blob/master/CSC495_variational_data_structures_slides.pdf}{Presentation Slides} 
+    }}
+  \headedsubsection {Independent Study in Structured Editing in Racket with Gary Baumgartner}
+    {Summer 2017}
+    {\bodytext{Self-initiated study of existing refactoring, live programming \& direct manipulation tooling.
+    \\
+    Began work on \href{https://github.com/disconcision/fructure}{Fructure}, a Racket-based polyglot structure editor, and
+    \href{https://github.com/disconcision/containment-patterns}{Containment Patterns}, \\ which extend pattern matching to capture contexts as composable continuations.
+    }}
+    
+\roottitle{Conferences}
+  \headedsubsection {Invited speaker at RacketCon}
+    {2019 \sbull Salt Lake City}
+    {\bodytext{
+    Spoke about \href{https://github.com/disconcision/fructure}{Fructure}, a prototype structured editor focused on edit-time term-rewriting
+    \\
+    \href{https://www.youtube.com/watch?v=CnbVCNIh1NA}{Recorded Talk} \sbull
+    \href{https://github.com/disconcision/fructure/blob/master/screenshots/REAL-RacketCon-Fructure-Talk.pdf}{Fructure Slides
+    }}}
+    
+  \headedsubsection {Seat Filler}
+    {Salt Lake City, Toronto, Eugene, St.Louis}
+    {\bodytext{
+    2019: \href{https://school.racket-lang.org/2019/plan/}{Racket's How to Design Languages Summer School}, \href{https://clojurenorth.com/}{Clojure North}. \\ 
+    2018: \href{https://www.cs.uoregon.edu/research/summerschool/summer18/}{Oregon Programming Languages Summer School}, \href{https://conf.researchr.org/home/icfp-2018}{ICFP}, \href{https://www.thestrangeloop.com/2018/sessions.html}{Strange Loop}, \href{https://con.racket-lang.org/2018/}{RacketCon}}} 
+    
+\roottitle{Teaching}
+  \headedsubsection{Course Development} {Summer 2018 \sbull University of Toronto}
+  {\bodytext{
+   Designed assignments and course materials for CSC324 - Principles of Programming Languages. \\
+  Specified and built \href{https://github.com/disconcision/ductile}{Ductile}, a toy language demonstrating exhaustive pattern matching on ADTs. \\
+  Implemented an \href{https://github.com/disconcision/racketlab/blob/master/choice-stepper.rkt}{algebraic stepper} to illustrate continuations and non-determinism in Scheme.}}
+  \headedsubsection{Teaching Assistance} {University of Toronto}
+  {\bodytext{
+\begin{tabular}{ p{2.3cm} l{} }
+  Winter 2019 & CSC324 Principles of Programming Languages\\
+  Fall 2018 & CSC324 Principles of Programming Languages \\
+  Fall 2018 & CSC104 Introduction to Computational Thinking \\
+  Winter 2018 & CSC324 Principles of Programming Languages \\
+  Fall 2017 & CSC324 Principles of Programming Languages
+  \end{tabular}
+  }}
+ 
+
+\roottitle{Industry Experience}
+  \headedsubsection {\href{http://todaqfinance.net/}{TODAQ Toronto} \sbull Software Development in Clojure}
+    {May 2019 - Current}
+    {\bodytext{On the back-end: Implementing and refining a new protocol for decentralized digital asset management based on a Merkel-trie-derived distributed data structure.
+    On the front-end: Building a reactive web portal and mocking up UI for upcoming protocol applications.}}
+
+\roottitle{Languages}
+\bodytext{
+  English \sbull French
+  }
+\end{document}
+
+＀
